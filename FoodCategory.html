@@ -1,0 +1,214 @@
+<ons-page id="FoodCategory">
+
+          <ons-toolbar style="background-color: rgb(233, 163, 71)">
+            <div class="left">
+              <!-- Toolbar-button with different icons depending on the platform. -->
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+
+
+            <div class="center">Category</div>
+            <div class="right" style="margin-right: 15px">
+              <ons-icon icon="md-face"></ons-icon>
+            </div>
+          </ons-toolbar>
+
+          <ons-card style="background-color: rgba(255, 235, 205, 0.37)">
+            <div class="content" style="text-align: center;">
+              <div class="recomended">
+                <h4>Recomended</h4>
+                <ons-carousel auto-scroll auto-scroll-ratio="0.5" auto-refresh swipeable overscrollable
+                  item-width="130px" class="recomended_list" id="carousel">
+                  <ons-carousel-item modifier="nodivider" id="item1" class="recomended_item"
+                    onclick="fn.pushPage({'id': 'ResturantMenu.html', 'title': 'ResturantMenu'})">
+                    <div class="thumbnail1"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fkfc.jpg?alt=media&token=c7aa805f-6f03-4d1b-bc8e-0c0baee13523')">
+                    </div>
+                    <div class="recomended_item_title" id="item1_Name">KFC</div>
+                  </ons-carousel-item>
+                  <ons-carousel-item modifier="nodivider" id="item2" class="recomended_item">
+                    <div class="thumbnail"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fjapan.jpg?alt=media&token=72df14b4-bb16-4cc3-9f33-018c04361ae7')">
+
+                    </div>
+                    <div class="recomended_item_title" id="item1_Name">Hajibang</div>
+                  </ons-carousel-item>
+                  <ons-carousel-item modifier="nodivider" id="item3" class="recomended_item">
+                    <div class="thumbnail"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Ffirerice.jpg?alt=media&token=346c4d69-5684-4012-a829-630ef7590ad7')">
+
+                    </div>
+                    <div class="recomended_item_title" id="item1_Name">Wan Jai</div>
+                  </ons-carousel-item>
+                  <ons-carousel-item modifier="nodivider" id="item4" class="recomended_item">
+                    <div class="thumbnail3"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fpizza.jpg?alt=media&token=d766fb91-0290-4fed-84c4-3beccd062418')">
+
+                    </div>
+                    <div class="recomended_item_title" id="item1_Name">Pizza Hut</div>
+                  </ons-carousel-item>
+                  <ons-carousel-item modifier="nodivider" id="item5" class="recomended_item">
+                    <div class="thumbnail2"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fsomtum.jpg?alt=media&token=c2c4ed11-031c-4538-8ab5-d4a602b4f866')">
+
+                    </div>
+                    <div class="recomended_item_title" id="item1_Name">Zab Somtum</div>
+                  </ons-carousel-item>
+                </ons-carousel>
+              </div>
+              <ons-row>
+                <ons-col>
+                  <ons-list-item tappable>
+                    <label class="left">
+                      <ons-checkbox input-id="check-1"></ons-checkbox>
+                    </label>
+                    <label for="check-1" class="center">
+                      Delivery
+                    </label>
+                  </ons-list-item>
+                </ons-col>
+                <ons-col>
+                  <ons-list-item tappable>
+                    <label class="left">
+                      <ons-checkbox input-id="check-2"></ons-checkbox>
+                    </label>
+                    <label for="check-2" class="center">
+                      Pick Up
+                    </label>
+                  </ons-list-item>
+                </ons-col>
+              </ons-row>
+              <p style="text-align: center; margin-top: 10px;">
+                <ons-search-input placeholder="Search" onchange="ons.notification.alert('Searched for: ' + this.value)">
+                </ons-search-input>
+              </p>
+
+              <ons-row>
+                <ons-col>
+                  <ons-card class="card" onclick="fn.pushPage({'id': 'ResturantList.html', 'title': 'ResturantList'})">
+                    <center>
+                      <div modifier="nodivider" id="item1" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Ffastfood.jpg?alt=media&token=8697b36a-f129-482f-8c02-7024a28b2672')">
+
+                      </div>
+                      <div class="category_item_title" id="item1_Name">Fast Food</div>
+
+                    </center>
+                  </ons-card>
+                </ons-col>
+                <ons-col>
+                  <ons-card class="card">
+                    <center>
+                      <div modifier="nodivider" id="item2" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fchainese.jpg?alt=media&token=84ea2910-10b3-4c6d-a029-59cff36eb21a')">
+
+                      </div>
+                      <div class="category_item_title" id="item1_Name">Chainese Food</div>
+
+                    </center>
+                  </ons-card>
+                </ons-col>
+              </ons-row>
+              <ons-row>
+                <ons-col>
+                  <ons-card class="card">
+                    <center>
+                      <div modifier="nodivider" id="item3" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fjapan.jpg?alt=media&token=9a749670-4604-4000-9932-59ca3a9919f7')">
+
+                      </div>
+                      <div class="category_item_title" id="item1_Name">JapaneseFood</div>
+                    </center>
+                  </ons-card>
+                </ons-col>
+                <ons-col>
+                  <ons-card>
+                    <center>
+                      <div modifier="nodivider" id="item4" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fthai.jpg?alt=media&token=37a3a440-451f-4f7f-bbda-33d352008181')">
+
+                      </div>
+                      <div class="category_item_title" id="item1_Name">Thai Food</div>
+
+                    </center>
+                  </ons-card>
+                </ons-col>
+
+              </ons-row>
+              <ons-row>
+                <ons-col>
+                  <ons-card>
+                    <center>
+                      <div modifier="nodivider" id="item5" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fveget.jpg?alt=media&token=94b9759e-50be-4723-87a5-97fbba8fe801')">
+
+                      </div>
+                      <div class="category_item_title" id="item1_Name">vegetarian Food</div>
+
+                    </center>
+                  </ons-card>
+                </ons-col>
+                <ons-col>
+                  <ons-card>
+                    <center>
+                      <div modifier="nodivider" id="item6" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fseafood.jpg?alt=media&token=5139f104-14f7-4480-96e2-cf2cfe57fcee')">
+
+                      </div>
+                      <div class="category_item_title" id="item1_Name">SeaFood</div>
+
+                    </center>
+                  </ons-card>
+                </ons-col>
+              </ons-row>
+              <ons-row>
+                <ons-col>
+                  <ons-card>
+                    <center>
+                      <div modifier="nodivider" id="item7" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fbeverage.jpg?alt=media&token=00f71559-d24b-4239-a735-40931e7b426b')">
+
+                      </div>
+                      <div class="category_item_title" id="item1_Name">Beverage</div>
+
+                    </center>
+
+                  </ons-card>
+                </ons-col>
+                <ons-col>
+                  <ons-card>
+                    <center>
+                      <div modifier="nodivider" id="item8" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fdessert.jpg?alt=media&token=8a41dd9a-4c09-4b84-b090-ea56b8a8b0e2')">
+
+                      </div>
+                      <div class="category_item_title" id="item1_Name">Dessert</div </center> </ons-card> </ons-col>
+                        </ons-row> </ons-card> </ons-page> </template> <template id="About.html">
+                      <ons-page id="About">
+                        <ons-toolbar style="background-color:rgb(233, 163, 71)">
+                          <div class="left">
+                            <ons-toolbar-button onclick="fn.open()">
+                              <ons-icon icon="md-menu"></ons-icon>
+                            </ons-toolbar-button>
+                          </div>
+                          <div class="right" style="margin-right: 15px">
+                            <ons-icon icon="md-face"></ons-icon>
+                          </div>
+                          <div class="center">
+                            About
+                          </div>
+                        </ons-toolbar>
+                      </ons-page>
+      </template>
+    </ons-page>
+  </template>

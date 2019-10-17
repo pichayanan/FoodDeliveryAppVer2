@@ -1,0 +1,225 @@
+
+    <ons-page id="ResturantList">
+      <ons-toolbar style="background-color: rgb(233, 163, 71)">
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="right" style="margin-right: 15px">
+          <ons-icon icon="md-face"></ons-icon>
+        </div>
+        <div class="center">ResturantList</div>
+      </ons-toolbar>
+
+      <ons-card>
+        <ons-list-header style="background-color: rgb(165, 93, 42)">
+          <center>
+            <h5> Fast Food Type</h5>
+          </center>
+        </ons-list-header>
+
+        <ons-list class="list">
+          <ons-card onclick="fn.pushPage({'id': 'ResturantMenu.html', 'title': 'ResturantMenu'})"
+            style="background-color: rgba(255, 235, 205, 0.37)">
+
+            <ons-list-item modifier="chevron" tappable>
+              <ons-row>
+                <ons-col>
+                  <left>
+                    <div modifier="chevron" id="item1" class="list_item"></div>
+                    <div class="imglist"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fkfc.jpg?alt=media&token=f6f0597d-5afb-43ff-a300-ad3948a647e8')">
+
+                    </div>
+                  </left>
+                  <left>
+                    <div class="list_item_title" id="item1_Name">KFC</div>
+                  </left>
+                  <left>
+                    <div class="list_title" id="item1_title">Free Delivery</div>
+                  </left>
+                </ons-col>
+                <ons-col></ons-col>
+                <ons-col style="margin-top: 20px">
+                  <div class="imgrate"
+                    style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar4.png?alt=media&token=e1b267a9-26d9-45ba-82b4-fc30742dadd1')">
+
+                  </div>
+
+
+                </ons-col>
+              </ons-row>
+
+            </ons-list-item>
+          </ons-card>
+
+
+          <ons-card style="background-color: rgba(255, 235, 205, 0.37)">
+
+            <ons-list-item modifier="chevron" tappable>
+              <ons-row style="border: none">
+                <ons-col>
+                  <left>
+                    <div modifier="chevron" id="item2" class="list_item"></div>
+                    <div class="imglist1"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fthe-true-story-behind-the-mysterious-mcdonalds-gold-card-673955074-Vytautas-Kielaitis-1024x683.jpg?alt=media&token=9a4dd6d7-bfcf-47e4-a345-2776362e59c7')">
+
+                    </div>
+                  </left>
+                  <left>
+                    <div class="list_item_title" id="item1_Name">Mc Donald's</div>
+                  </left>
+                  <left>
+                    <div class="list_title" id="item1_title"> Free delivery </div>
+                  </left>
+                </ons-col>
+                <ons-col></ons-col>
+                <ons-col style="margin-top: 20px">
+                  <div class="imgrate"
+                    style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar4.png?alt=media&token=e1b267a9-26d9-45ba-82b4-fc30742dadd1')">
+
+                  </div>
+                </ons-col>
+              </ons-row>
+
+            </ons-list-item>
+          </ons-card>
+
+
+          <ons-card style="background-color: rgba(255, 235, 205, 0.37)">
+
+            <ons-list-item modifier="chevron" tappable>
+              <ons-row style="border: none">
+                <ons-col>
+                  <left>
+                    <div modifier="chevron" id="item3" class="list_item"></div>
+                    <div class="imglist"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2FSizzler.jpg?alt=media&token=8d3aada4-e518-4fe4-8f1d-4da4587e3158')">
+
+                    </div>
+                  </left>
+                  <left>
+                    <div class="list_item_title" id="item1_Name">Sizzler</div>
+
+                  </left>
+                  <left>
+                    <div class="list_title" id="item1_title"> Free delivery </div>
+                  </left>
+                </ons-col>
+                <ons-col></ons-col>
+                <ons-col style="margin-top: 20px">
+                  <right>
+                    <div class="imgrate"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar5.png?alt=media&token=c1f0beac-33c8-4628-8a8d-b9c7c40e969d')">
+
+                    </div>
+                  </right>
+                </ons-col>
+              </ons-row>
+
+            </ons-list-item>
+          </ons-card>
+
+
+          <ons-card style="background-color: rgba(255, 235, 205, 0.37)">
+
+            <ons-list-item modifier="chevron" tappable>
+              <ons-row style="border: none">
+                <ons-col>
+                  <left>
+                    <div modifier="chevron" id="item4" class="list_item"></div>
+                    <div class="imglist"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fhut.jpg?alt=media&token=5c3ace89-5542-4ff5-9c2b-005c6e0d51a3')">
+
+                    </div>
+                  </left>
+                  <left>
+                    <div class="list_item_title" id="item1_Name">Pizza Huts</div>
+                  </left>
+                  <left>
+                    <div class="list_title" id="item1_title"> Free delivery </div>
+                  </left>
+                </ons-col>
+                <ons-col></ons-col>
+                <ons-col style="margin-top: 20px">
+                  <right>
+                    <div class="imgrate"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar3.png?alt=media&token=77a40035-7c0e-479c-8d33-3eccbe0237bb')">
+
+                    </div>
+                  </right>
+                </ons-col>
+              </ons-row>
+          </ons-card>
+
+
+          <ons-card style="background-color: rgba(255, 235, 205, 0.37)">
+
+            <ons-list-item modifier="chevron" tappable>
+              <ons-row style="border: none">
+                <ons-col>
+                  <left>
+                    <div modifier="chevron" id="item5" class="list_item"></div>
+                    <div class="imglist"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fberger.png?alt=media&token=a97d4e41-160a-48f6-8050-7ad296e3fddd')">
+
+                    </div>
+                  </left>
+                  <left>
+                    <div class="list_item_title" id="item1_Name">Burger King</div>
+
+                  </left>
+                  <left>
+                    <div class="list_title" id="item1_title"> Free delivery </div>
+                  </left>
+                </ons-col>
+                <ons-col></ons-col>
+                <ons-col style="margin-top: 20px">
+                  <right>
+                    <div class="imgrate"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar4.png?alt=media&token=e1b267a9-26d9-45ba-82b4-fc30742dadd1')">
+
+                    </div>
+                  </right>
+                </ons-col>
+              </ons-row>
+
+            </ons-list-item>
+          </ons-card>
+
+
+          <ons-card style="background-color: rgba(255, 235, 205, 0.37)">
+
+            <ons-list-item modifier="chevron" tappable>
+              <ons-row style="border: none">
+                <ons-col>
+                  <left>
+                    <div modifier="chevron" id="item6" class="list_item"></div>
+                    <div class="imglist2"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fsubway.jpg?alt=media&token=72a0a607-c55c-403a-83b2-516b10ee268e')">
+
+                    </div>
+                  </left>
+                  <left>
+                    <div class="list_item_title" id="item1_Name">Subway</div>
+                  </left>
+                  <left>
+                    <div class="list_title" id="item1_title"> Free delivery </div>
+                  </left>
+                </ons-col>
+                <ons-col></ons-col>
+                <ons-col style="margin-top: 20px">
+                  <right>
+                    <div class="imgrate"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar3.png?alt=media&token=77a40035-7c0e-479c-8d33-3eccbe0237bb')">
+
+                    </div>
+                  </right>
+                </ons-col>
+              </ons-row>
+          </ons-card>
+        </ons-list>
+
+      </ons-card>
+    </ons-page>
+
+
