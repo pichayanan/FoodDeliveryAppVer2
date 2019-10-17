@@ -42,7 +42,7 @@ document.addEventListener('init', function (event) {
   if (page.id === 'register') {
     console.log("register");
   
-      $("#signup-buttons").click(function () {
+      $("#signin-buttons").click(function () {
   
         var email = document.getElementById('username').value;
         var password = document.getElementById('password').value;
@@ -94,12 +94,12 @@ document.addEventListener('init', function (event) {
   if (page.id === 'login') {
     console.log("login");
     
-    $("#signup-button").click(function () {
+    $("#signin-button").click(function () {
       $("#content")[0].load("register.html");
       $("#menu")[0].close();
     });
 
-    $("#signinbtn").click(function () {
+    $("#signupbtn").click(function () {
       var email = $("#username").val();
       var password = $("#password").val();
       firebase.auth().signInWithEmailAndPassword(email, password).then(function () {
