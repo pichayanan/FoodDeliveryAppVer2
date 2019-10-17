@@ -41,22 +41,22 @@ document.addEventListener('init', function (event) {
   if (page.id === 'menu') {
     console.log("menu");
 
-    // $("#login").click(function () {
-    //   $("#content")[0].load("login.html");  
-    //   $("#menu")[0].close();   
-    // });
+    $("#login").click(function () {
+      $("#content")[0].load("login.html");  
+      $("#menu")[0].close();   
+    });
 
-    // $("#logout").click(function () {
-    //   //firebase sign out
-    //   firebase.auth().signOut().then(function() {
-    //     // Sign-out successful.
-    //     $("#content")[0].load("login.html");  
-    //     $("#menu")[0].close();   
-    //   }).catch(function(error) {
-    //     // An error happened.
-    //     console.log(error.message);
-    //   });
-    // });
+    $("#logout").click(function () {
+      //firebase sign out
+      firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        $("#content")[0].load("login.html");  
+        $("#menu")[0].close();   
+      }).catch(function(error) {
+        // An error happened.
+        console.log(error.message);
+      });
+    });
 
     $("#home").click(function () {
       $("#content")[0].load("FoodCategory.html");  

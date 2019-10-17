@@ -1,0 +1,65 @@
+<ons-page id="login">
+
+
+
+    <ons-card class="LOGO"
+      style="margin-top: 50px;margin-right: 20px;margin-left: 20px ;border: none;background-color: rgba(170, 131, 80, 0.342)">
+      <center>
+        <div class=" login-form" style="background-color: rgba(170, 131, 80, 0)">
+
+          <center>
+            <h2>Sign In</h2>
+          </center>
+          <center>
+            <div class="imglogo"
+              style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logoApp%2F214-2142458_food-truck-park-logo.png?alt=media&token=16e50736-6938-453d-b14f-6dfeb725e321')">
+
+            </div>
+          </center>
+
+          <br><br>
+          <div class="content" style="text-align: center; margin-top: 30px;">
+            <p>
+              <ons-input id="username" modifier="underbar" placeholder="Username"></ons-input>
+            </p>
+            <p>
+              <ons-input id="password" modifier="underbar" type="password" placeholder="Password">
+              </ons-input>
+            </p>
+            <br><br>
+            <ons-row>
+              <ons-col style="margin: 10px">
+                <ons-button modifier="large" class="login-button" id="signinbtn"
+                  style="background-color: rgb(233, 150, 41);">Sign In
+                </ons-button>
+              </ons-col>
+              <ons-col style="margin: 10px">
+                <ons-button modifier="large" class="login-button" id="signup-button"
+                  style="background-color: rgb(233, 150, 41);">Sign Up
+                </ons-button>
+              </ons-col>
+            </ons-row>
+            <br><br>
+            <center>
+              <div>OR</div>
+            </center>
+
+            <center>
+              <p style="margin-top:30px;">
+                <ons-button class="button--large--cta" id="gmailbtn" style="width: 80%;background-color: red;">
+                  <ion-icon name="logo-google" size="32px,margin-left,material:24px"></ion-icon>Sign in with Google
+                </ons-button>
+              </p>
+            </center>
+            <ons-row style="margin-top: 30px;color:navy">
+              <ons-col>                            
+                  <div id="backhomebtn"><ons-icon icon="fa-arrow-left"></ons-icon> Back to Homepage</div>  
+              </ons-col>
+          </ons-row>
+          </div>
+        </div>
+      </center>
+    </ons-card>
+
+  </ons-page>
+

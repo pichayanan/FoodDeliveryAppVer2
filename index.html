@@ -65,8 +65,43 @@
     </ons-page>
   </template>
 
+  <script>
+    ons.platform.select('ios');
+    // function change_page() {
 
+    //   document.querySelector('#myNavigator').pushPage('page.html', { animation: "lift" });
 
+    // }
+
+    // function change_page1() {
+
+    //   document.querySelector('#myNavigator').pushPage('register.html', { animation: "lift" });
+
+    // }
+    // function change_page2() {
+
+    //   document.querySelector('#myNavigator').pushPage('page.html', { animation: "lift" });
+
+    // }
+    // function change_page3() {
+
+    //   document.querySelector('#myNavigator').pushPage('OrderComfirmmation.html', { animation: "lift" });
+
+    // }
+    // function change_page4() {
+
+    //   document.querySelector('#myNavigator').pushPage('page.html', { animation: "lift" });
+
+    // }
+    // function change_page5() {
+
+    //   document.querySelector('#myNavigator').pushPage('page.html', { animation: "lift" });
+
+    // }
+    function pop_page() {
+      document.querySelector('#myNavigator').popPage();
+    }
+</script>
   <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
