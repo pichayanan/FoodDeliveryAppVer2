@@ -14,8 +14,7 @@ var db = firebase.firestore();
 
 document.addEventListener('init', function (event) {
   var page = event.target;
-
-
+ 
 
   if (page.id === 'Foodcategory') {
     console.log("FoodCategory");
@@ -72,24 +71,36 @@ document.addEventListener('init', function (event) {
     });
 
   }
-
   if (page.id === 'login') {
     console.log("login");
 
-    $("#signup-button").click(function () {
-      $("#content")[0].load("Register.html");
-      $("#menu")[0].close();
-    });
-
     $("#signinbtn").click(function () {
+      var email = $("#username").val();
+      var password = $("#password").val();
+      firebase.auth().signInWithEmailAndPassword(email, password).then(function () {
+        content.load('splitter.html');
+
+      }
+      )
+
+        .catch(function (error) {
+         
+          console.log(error.message);
+        });
+
+
+
+    })
+
+    $("#gbtn").click(function () {
       var provider = new firebase.auth.GoogleAuthProvider();
-      firebase.auth().signInWithPopup(provider).then(function (result) {
+      firebase.auth().signInWithPopup(provider).then(function(result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = result.credential.accessToken;
         // The signed-in user info.
         var user = result.user;
-        content.load('index.html');
-      }).catch(function (error) {
+        content.load('splitter.html');
+      }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -100,92 +111,10 @@ document.addEventListener('init', function (event) {
         // ...
       });
     });
-   
-    // $("#backhomebtn").click(function () {
-    //   $("#content")[0].load("FoodCategory.html");
-    //   $("#menu")[0].close();
-    // });
 
   }
 
-  //   if (page.id === 'login') {
-  //     console.log("login")
-  //     firebase.auth().onAuthStateChanged(function (user) {
-  //       if (user) {
-  //         // User is signed in.
-  //         var displayName = user.displayName;
-  //         var email = user.email;
-  //         var emailVerified = user.emailVerified;
-  //         var photoURL = user.photoURL;
-  //         var isAnonymous = user.isAnonymous;
-  //         var uid = user.uid;
-  //         var providerData = user.providerData;
-  //         // console.log(${email} User is signed in.);
-
-  //         $("#content")[0].load("index.html");
-  //         // ...
-  //       } else {
-  //         // User is signed out.
-  //         // ...
-  //         console.log("User is signed out.");
-
-  //       }
-  //     });
-  //     $("#signinbtn").click(function () {
-  //       var username = $("#username").val();
-  //       var password = $("#password").val();
-
-
-  //       firebase.auth().signInWithEmailAndPassword(username, password)
-  //         .then(function (result) {
-  //           console.log(result);
-  //          $("#signinbtn").click(function(){
-  //          var username = $("#username").val();
-  //          var password = $("#password").val();
-  //          firebase.auth().signInWithEmailAndPassword(username, password).catch(function(error) {
-
-  //         console.log(error.message);
-  //       });
-
-  //     })
-  //     });
-  //     });
-
-
-  //     $('#gmailbtn').click( function googleLogin() {
-  //       firebase.auth().signInWithRedirect(provider);
-  //       firebase.auth().getRedirectResult().then(function(result) {
-  //         if (result.credential) {
-  //           // This gives you a Google Access Token. You can use it to access the Google API.
-  //           var token = result.credential.accessToken;
-  //           // ...
-  //         }
-  //         // The signed-in user info.
-  //         var user = result.user;
-  //         console.log('user'+token);
-
-  //       }).catch(function(error) {
-  //         // Handle Errors here.
-  //         var errorCode = error.code;
-  //         var errorMessage = error.message;
-  //         // The email of the user's account used.
-  //         var email = error.email;
-  //         // The firebase.auth.AuthCredential type that was used.
-  //         var credential = error.credential;
-  //         // ...
-  //         console.log('error'+errorCode);
-  //       });
-  //     });
-
-  //   }
-
-
-
-
-
-
-
-
+  
 });
 $("#card").empty();
 db.collection("category").get().then((querySnapshot) => {
@@ -261,4 +190,5 @@ window.fn.pushPage = function (page, anim) {
     document.getElementById('myNavigator').pushPage(page.id, { data: { title: page.title } });
   }
 };
+
 

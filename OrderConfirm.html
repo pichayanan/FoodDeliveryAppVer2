@@ -1,0 +1,105 @@
+<ons-page id="OrderConfirm">
+        <ons-toolbar style="background-color: rgb(233, 163, 71)">
+          <div class="left">
+            <ons-back-button></ons-back-button>
+          </div>
+          <div class="right" style="margin-right: 15px">
+            <ons-icon icon="md-face"></ons-icon>
+          </div>
+          <div class="center">OrderConfirmmation</div>
+        </ons-toolbar>
+        <ons-card style="background-color: rgba(255, 235, 205, 0.37)">
+          <ons-list-header style="background-color: rgb(165, 93, 42)">
+            <center>
+              <h5>Your Orders</h5>
+            </center>
+          </ons-list-header>
+              <div modifier="chevron" id="item1" class="list_item"></div>
+              <div class="imglist"
+                style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fkfc.jpg?alt=media&token=f6f0597d-5afb-43ff-a300-ad3948a647e8')">
+
+              </div>
+              <left>
+                <h5>KFC</h5>
+              </left>
+              <left>
+                <h7> Free delivery </h7>
+                </center>
+            </ons-col>
+  
+          </ons-row>
+          <br>
+          <br>
+  
+          <ons-row style="border: none">
+            <ons-col>
+              Name Of Dish
+  
+            </ons-col>
+            <ons-col>
+              <center>
+                Quantity
+              </center>
+  
+            </ons-col>
+            <ons-col>
+              <center>
+                Price
+              </center>
+  
+  
+  
+            </ons-col>
+  
+          </ons-row>
+          <p>-------------------------------------------------------------</p>
+          <ons-row style="border: none">
+            <ons-col>
+              1.Spicy Chicken Rice Bowl
+            </ons-col>
+            <ons-col>
+              <center> 1</center>
+  
+            </ons-col>
+            <ons-col>
+              <center> 59.00</center>
+            </ons-col>
+  
+          </ons-row>
+  
+          <ons-row style="border: none">
+            <ons-col>
+  
+            </ons-col>
+  
+            <ons-col>
+              <div style="text-align: right;margin-right: 40px">
+                Total : 59.00
+              </div>
+            </ons-col>
+  
+          </ons-row>
+          <p>-------------------------------------------------------------</p>
+  
+          <center>
+            <ons-col>
+              <h3>Pay With</h3>
+            </ons-col>
+          </center>
+          <ons-button modifier="large" class="login-button" id="ccard" onclick="change_page4()">Credit Card
+          </ons-button>
+          <br>
+          <center>
+            <h5>
+              OR
+            </h5>
+          </center>
+          <br>
+          <ons-button modifier="large" class="login-button" id="cash" onclick="change_page5()">Cash On Delivery
+          </ons-button>
+          <br><br>
+  
+  
+  
+        </ons-card>
+      </ons-page>
