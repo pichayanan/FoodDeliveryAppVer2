@@ -8,7 +8,7 @@
   <title>FoodDeliveryAppNew</title>
 
 
-  
+
 
   <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
@@ -48,7 +48,7 @@
         <ons-splitter-content id="content" page="FoodCategory.html">
         </ons-splitter-content>
       </ons-splitter> -->
-       <!-- First navigation component: Navigator. This will remain always on top of the app. -->
+  <!-- First navigation component: Navigator. This will remain always on top of the app. -->
   <ons-navigator id="myNavigator" page="splitter.html">
   </ons-navigator>
 
@@ -56,7 +56,7 @@
   <!-- Second navigation component: Splitter. This will disappear if the first component changes its content. -->
   <template id="splitter.html">
     <ons-page id="page">
-      <ons-splitter >
+      <ons-splitter>
         <ons-splitter-side id="menu" page="menu.html" swipeable width="250px" collapse swipe-target-width="50px">
         </ons-splitter-side>
         <ons-splitter-content page="FoodCategory.html" id="content">
@@ -101,16 +101,30 @@
     function pop_page() {
       document.querySelector('#myNavigator').popPage();
     }
-</script>
+  </script>
   <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script> -->
   <script src="lib/onsen/js/onsenui.js"></script>
   <script src="lib/jquery/jquery-3.4.1.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script> -->
   <script src="app.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBGWQ0ZvH0R6NFUAS_CqmgIyV_hSPBzUJk",
+      authDomain: "fooddeliveryapp-51a8d.firebaseapp.com",
+    };
+    firebase.initializeApp(config);
+    
+    function back() {
+
+     document.querySelector('#myNavigator').pushPage('splitter.html', { animation: "lift" });
+
+}
+  </script>
 
 </body>
 
