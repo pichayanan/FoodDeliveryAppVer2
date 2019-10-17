@@ -19,9 +19,7 @@
   <link rel="stylesheet" href="css/onsen-css-components.min.css">
   <script src="js/onsenui.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+ 
 
   <script src="lib/jquery/jquery-3.4.1.min.js"></script>
 
@@ -65,67 +63,41 @@
     </ons-page>
   </template>
 
-  <script>
-    ons.platform.select('ios');
-    // function change_page() {
+  
+</body>
+<script>
+ src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"
+src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"
+src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"
+src="lib/onsen/js/onsenui.js"
+src="lib/jquery/jquery-3.4.1.min.js"
+ src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"
+ src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"
+src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"
+  ons.platform.select('ios');
 
-    //   document.querySelector('#myNavigator').pushPage('page.html', { animation: "lift" });
+  src="app.js"
+   // Initialize Firebase
+   var config = {
+    apiKey: "AIzaSyBGWQ0ZvH0R6NFUAS_CqmgIyV_hSPBzUJk",
+    authDomain: "fooddeliveryapp-51a8d.firebaseapp.com",
+  };
+  firebase.initializeApp(config);
+  
+  function back() {
 
-    // }
-
-    // function change_page1() {
-
-    //   document.querySelector('#myNavigator').pushPage('register.html', { animation: "lift" });
-
-    // }
-    // function change_page2() {
-
-    //   document.querySelector('#myNavigator').pushPage('page.html', { animation: "lift" });
-
-    // }
-    // function change_page3() {
-
-    //   document.querySelector('#myNavigator').pushPage('OrderComfirmmation.html', { animation: "lift" });
-
-    // }
-    // function change_page4() {
-
-    //   document.querySelector('#myNavigator').pushPage('page.html', { animation: "lift" });
-
-    // }
-    // function change_page5() {
-
-    //   document.querySelector('#myNavigator').pushPage('page.html', { animation: "lift" });
-
-    // }
-    function pop_page() {
-      document.querySelector('#myNavigator').popPage();
-    }
-  </script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
-  <!-- <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script> -->
-  <script src="lib/onsen/js/onsenui.js"></script>
-  <script src="lib/jquery/jquery-3.4.1.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
-  <!-- <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script> -->
-  <script src="app.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBGWQ0ZvH0R6NFUAS_CqmgIyV_hSPBzUJk",
-      authDomain: "fooddeliveryapp-51a8d.firebaseapp.com",
-    };
-    firebase.initializeApp(config);
-    
-    function back() {
-
-     document.querySelector('#myNavigator').pushPage('splitter.html', { animation: "lift" });
+   document.querySelector('#myNavigator').pushPage('splitter.html', { animation: "lift" });
 
 }
-  </script>
+  function pop_page() {
+    document.querySelector('#myNavigator').popPage();
+  }
+</script>
 
-</body>
+
+
+ 
+
+
 
 </html>

@@ -39,6 +39,18 @@ document.addEventListener('init', function (event) {
 
   }
 
+
+  if (page.id === 'register.html') {
+    console.log("register");
+
+    $("#signup-buttons").click(function () {
+      console.log("signup");
+      $("#content")[0].load("FoodCatergory.html");
+      $("#menu")[0].close();
+    });
+   
+  }
+
   if (page.id === 'menu') {
     console.log("menu");
 
