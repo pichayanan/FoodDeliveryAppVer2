@@ -39,14 +39,34 @@ document.addEventListener('init', function (event) {
   }
 
 
-  if (page.id === 'register.html') {
+  if (page.id === 'register') {
     console.log("register");
-
-    $("#signup-buttons").click(function () {
-      console.log("signup");
-      $("#content")[0].load("FoodCatergory.html");
-      $("#menu")[0].close();
-    });
+  
+      $("#signup-buttons").click(function () {
+  
+        var email = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+  
+          if (errorCode === 'auth/weak-password') {
+            alert('The password is too weak');
+  
+          } else {
+            alert(errorMessage);
+            content.load('login.html');
+          }
+          console.log(error);
+  
+        });
+  
+  
+      });
+  
+      
+    
    
   }
 
@@ -73,6 +93,11 @@ document.addEventListener('init', function (event) {
   }
   if (page.id === 'login') {
     console.log("login");
+    
+    $("#signup-button").click(function () {
+      $("#content")[0].load("register.html");
+      $("#menu")[0].close();
+    });
 
     $("#signinbtn").click(function () {
       var email = $("#username").val();
